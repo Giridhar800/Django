@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> date and time formate</title>
+</head>
+
+<body>
+
+
+{% block content %}
+
+    <h1> {{ dt | date:'DATE_FORMAT' }} </h1>
+    <h1> {{ dt | date:'DATETIME_FORMAT'}} </h1>
+     <h1> {{ dt | date:'SHORT_DATE_FORMAT'}} </h1>
+     <h1> {{ dt | date:'SHORT_DATETIME_FORMAT'}} </h1>
+     <h1> {{ dt | date:'TIME_FORMAT'}} </h1>
+
+
+{% endblock %}
+
+
+</body>
+</html>

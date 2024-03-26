@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Book details </h1>
+{% for page in page_obj %}
+    <h2> {{ page.title }}</h2>
+    <h3> {{ page.author }}</h3>
+    <p> {{ page.description }}</p>
+{% endfor %}
+<div>
+    <span>
+        {% if psge_obj.has_previous %}
+            <a href="?page={{ page_obj.next_page_number }}"> Previous </a>
+        {% endif %}
+    </span>
+    <span>
+        {{ page_obj.number }}
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}"> Next </a>
+        {% endif %}
+    </span>
+</div>
+
+</body>
+</html>

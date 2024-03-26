@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquary</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideDown(5000);
+            });
+            $("#stop").click(function(){
+                $("#panel").stop();
+            });
+        })
+    </script>
+    <style>
+        #panel,#flip{
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+            background-color: orangered;
+            color:white;
+            border:solid 1px #666
+            border-radius: 3px;
+        }
+        #panel{
+            padding: 500px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<button id="stop"> stop sliding </button>
+<div id="flip"> click to slide down panel </div>
+<div id="panel"> Well come to durga soft </div>
+
+</body>
+</html>

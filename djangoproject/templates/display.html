@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table, th, tr, td{
+        border: 1px solid black;
+    }
+</style>
+<body>
+<table>
+    <h3> Employee Details </h3>
+    <th> ID </th>
+    <th> NAME </th>
+    <th> EID </th>
+    <th> EADDRESS </th>
+    <th> AGE </th>
+    <th> DOB </th>
+    {% for emp in Employees %}
+        <tr>
+         <td> {{ emp.id }}</td>
+        <td> {{ emp.name }}</td>
+        <td> {{ emp.eid }}</td>
+        <td> {{ emp.eaddress }}</td>
+        <td> {{ emp.age }}</td>
+        <td> {{ emp.dob }}</td>
+        </tr>
+
+
+    {% endfor %}
+</table>
+
+</body>
+</html>
